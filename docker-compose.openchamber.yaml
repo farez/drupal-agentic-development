@@ -14,10 +14,10 @@ services:
 
     volumes:
       - ../:/home/openchamber/workspaces/sandbox
-      - ./.ddev/openchamber/data/config:/home/openchamber/.config/openchamber
-      - ./.ddev/openchamber/data/opencode-share:/home/openchamber/.local/share/opencode
-      - ./.ddev/openchamber/data/opencode-config:/home/openchamber/.config/opencode
-      - ./.ddev/openchamber/data/ssh:/home/openchamber/.ssh
+      - ./openchamber/data/config:/home/openchamber/.config/openchamber
+      - ./openchamber/data/opencode-share:/home/openchamber/.local/share/opencode
+      - ./openchamber/data/opencode-config:/home/openchamber/.config/opencode
+      - ./openchamber/data/ssh:/home/openchamber/.ssh
 
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}

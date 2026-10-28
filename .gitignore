@@ -36,7 +36,7 @@
 /xhprof/xhprof_prepend.php
 /**/README.*
 config.yaml
-.ddev/openchamber/data
+/openchamber/data
 opencode/data
 opencode/mcp/opencode.local.jsonc
 /.env
