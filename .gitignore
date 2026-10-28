@@ -6,7 +6,6 @@
 /**/*.example
 !docker-compose.local.yaml.example
 !opencode/mcp/opencode.local.jsonc.example
-!docker-compose.backstop.yaml.example
 !docker-compose.selenium.yaml.example
 /.dbimageBuild
 /.ddev-docker-*.yaml
@@ -44,10 +43,8 @@ traefik/certs/ai-env.crt
 traefik/certs/ai-env.key
 traefik/config/ai-env.yaml
 
-# Installed by project-level DDEV add-ons (e.g. swk-microsites: tests/ddev-addon).
-# Opt-in copies of the compose files: docker-compose.{backstop,selenium}.yaml.example
+# Add-on install records. Files a project's own add-on installs belong in that
+# project's .ddev/.git/info/exclude, not here.
 /addon-metadata/*
-/commands/host/backstop
-/commands/web/behat
-/docker-compose.backstop.yaml
+# Opt-in copy of docker-compose.selenium.yaml.example
 /docker-compose.selenium.yaml
