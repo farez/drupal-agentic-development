@@ -113,7 +113,7 @@ ENV NPM_CONFIG_PREFIX=${USER_HOME}/.npm-global
 ENV PATH="${USER_HOME}/.npm-global/bin:${PATH}"
 
 # Install OpenCode globally
-RUN npm install -g opencode-ai@1.18.31
+RUN npm install -g opencode-ai@1.19.5
 
 # Install Playwright + Chromium for opencode browser interaction tools
 # Also install Firefox for @playwright/mcp MCP server (chrome channel not available on ARM64)
