@@ -45,7 +45,7 @@ cp "$SSH_KEY_DIR/id_ed25519.pub" ~/.ssh/authorized_keys 2>/dev/null
 chmod 600 ~/.ssh/authorized_keys 2>/dev/null
 
 # Start sshd for Ralph access
-env | grep -E '^(DDEV_|IS_DDEV_PROJECT|HOME=|PATH=|LANG|TZ=|PLAYWRIGHT_)' \
+env | grep -E '^(DDEV_|IS_DDEV_PROJECT|HOME=|PATH=|LANG|TZ=|PLAYWRIGHT_|OPENCODE_)' \
     | sed 's/^/export /' | sudo tee /etc/ddev-env > /dev/null
 sudo chmod 644 /etc/ddev-env
 sudo /usr/sbin/sshd 2>/dev/null || true

@@ -112,8 +112,8 @@ ENV HOME=${USER_HOME}
 ENV NPM_CONFIG_PREFIX=${USER_HOME}/.npm-global
 ENV PATH="${USER_HOME}/.npm-global/bin:${PATH}"
 
-# Install OpenCode globally
-RUN npm install -g opencode-ai@1.19.5
+# Install OpenCode globally (anomalyco/opencode — pinned)
+RUN npm install -g @opencode/cli@2.2.1
 
 # Install Playwright + Chromium for opencode browser interaction tools
 # Also install Firefox for @playwright/mcp MCP server (chrome channel not available on ARM64)
@@ -152,5 +152,5 @@ ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 WORKDIR /var/www/html
 
-CMD ["opencode", "serve", "--hostname", "0.0.0.0", "--port", "3000", "--mdns", "false"]
+CMD ["opencode", "serve", "--hostname", "0.0.0.0", "--port", "3000"]
 

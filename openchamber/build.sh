@@ -4,10 +4,10 @@
 # the OpenChamber web UI can be rebuilt on any machine with the same result.
 #
 # Usage: .ddev/openchamber/build.sh          # builds the pinned tag
-#        OPENCHAMBER_TAG=v1.2.3 .ddev/openchamber/build.sh
+#        OPENCHAMBER_TAG=v2.5.3 .ddev/openchamber/build.sh
 set -euo pipefail
 
-TAG="${OPENCHAMBER_TAG:-v1.24.2}"
+TAG="${OPENCHAMBER_TAG:-v2.5.3}"
 REPO="https://github.com/openchamber/openchamber.git"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT

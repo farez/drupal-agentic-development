@@ -5,6 +5,8 @@ services:
 
     environment:
       OPENCODE_HOST: "http://ddev-${DDEV_SITENAME}-opencode:3000"
+      # OpenCode v2 server requires Basic auth; sent with every proxied request.
+      OPENCODE_PASSWORD: "${OPENCHAMBER_PASSWORD}"
       OPENCODE_SKIP_START: "true"
       UI_PASSWORD: "${OPENCHAMBER_PASSWORD}"
       OPENCHAMBER_HOST: "0.0.0.0"
@@ -22,5 +24,8 @@ services:
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
+
+    x-ddev:
+      describe-info: "OpenChamber v2.5.3"
 
     restart: "no"
