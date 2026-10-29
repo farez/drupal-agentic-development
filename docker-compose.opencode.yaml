@@ -12,7 +12,7 @@ services:
       - ./opencode/mcp:/home/opencode/.config/opencode
       - ./opencode/data/share:/home/opencode/.local/share/opencode
       - ../.ddev/.agent-ssh-keys:/home/opencode/.ssh/agent-key
-      - ../.ddev/.ddev/openchamber/data/config/chats:/home/openchamber/.config/openchamber/chats
+      - ./openchamber/data/config/chats:/home/openchamber/.config/openchamber/chats
 
     working_dir: /var/www/html
 
